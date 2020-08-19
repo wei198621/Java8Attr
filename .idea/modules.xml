@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01Basic/01Basic.iml" filepath="$PROJECT_DIR$/01Basic/01Basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_02lambda/_02lambda.iml" filepath="$PROJECT_DIR$/_02lambda/_02lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_03defaultAndStatic/_03defaultAndStatic.iml" filepath="$PROJECT_DIR$/_03defaultAndStatic/_03defaultAndStatic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04MethodRef/_04MethodRef.iml" filepath="$PROJECT_DIR$/_04MethodRef/_04MethodRef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_05Optional/_05Optional.iml" filepath="$PROJECT_DIR$/_05Optional/_05Optional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_06Stream/_06Stream.iml" filepath="$PROJECT_DIR$/_06Stream/_06Stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_07DateTime/_07DateTime.iml" filepath="$PROJECT_DIR$/_07DateTime/_07DateTime.iml" />
+    </modules>
+  </component>
+</project>

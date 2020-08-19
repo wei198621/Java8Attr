@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="01Basic" />
+        <module name="_02lambda" />
+        <module name="_03defaultAndStatic" />
+        <module name="_04MethodRef" />
+        <module name="_05Optional" />
+        <module name="_06Stream" />
+        <module name="_07DateTime" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01Basic" target="1.8" />
+      <module name="_02lambda" target="1.8" />
+      <module name="_03defaultAndStatic" target="1.8" />
+      <module name="_04MethodRef" target="1.8" />
+      <module name="_05Optional" target="1.8" />
+      <module name="_06Stream" target="1.8" />
+      <module name="_07DateTime" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+方法引用，可用于对Lambda表达式进一步简化，所以方法引用是用在Lambda表达式中的。方法引用中使用::符号。
+
+
+
+        // 普通写法
+        Supplier<MethodReferenceBean> referenceBeanSupplier = () -> new MethodReferenceBean();
+        // 构造器引用，要注意没有()和->了
+        Supplier<MethodReferenceBean> methodReferenceBeanSupplier = MethodReferenceBean::new;

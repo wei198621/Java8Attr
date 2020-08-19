@@ -1,0 +1,79 @@
+
+6. Stream
+
+6.1 什么是Stream
+
+6.2 内部迭代
+
+6.3 一次消费
+
+            获取流后，对该流的操作是一次性的，也就是该流只能被操作一次，如果已经被操作的流再次操作，将抛出异常
+            @Test
+            public void test02() {
+              List<Employee> employees = DataUtils.getEmployees();
+              // 获取流
+              Stream<Employee> stream = employees.stream();
+              // 流被操作了一次
+              Set<Employee> collect = stream.collect(Collectors.toSet());
+              // 再次操作流将抛出异常 java.lang.IllegalStateException: stream has already been operated upon or closed
+              TreeSet<Employee> collect1 = stream.collect(Collectors.toCollection(TreeSet::new));
+            }
+6.4 实现机制
+         惰性求值 （中间操作） ：  惰性求值期间不会执行相应代码操作。最终结果返回Stream流
+         及早求值 （终端操作）
+
+6.5 获取流
+        of
+        iterate
+        Arrays.stream()
+        generate
+
+6.6 中间操作   :  中间操作将定义处理流的过程，到终端操作时，中间操作将执行并得到最终结果。要注意，中间操作返回的是一个新的流。
+     6.6.1 筛选
+         filter
+         distinct
+
+     6.6.2 切片
+         limit：
+         skip：
+
+    6.6.3 映射
+        map：
+        flatMap：
+
+    6.6.4 排序
+         sorted
+         sorted(Comparator<? super T> comparator)
+                // 写法一：Comparator接口的Lambda表达式
+                List<Employee> collect = emps.stream()
+                                .sorted((x, y) -> x.getAge() - y.getAge())
+                                .collect(Collectors.toList());
+                // 写法二：使用Comparator接口中的默认方法
+                List<Employee> collect = emps.stream()
+                                .sorted(Comparator.comparing(employee -> employee.getAge()))
+                                .collect(Collectors.toList());
+                // 写法三：使用方法引用
+                List<Employee> collect = emps.stream()
+                                .sorted(Comparator.comparingInt(Employee::getAge))
+                                .collect(Collectors.toList());
+
+
+
+
+6.7 终端操作
+    6.7.1 匹配
+         anyMatch：
+         allMatch
+         noneMatch
+   6.7.2 查找
+        findFirst
+        findAny
+   6.7.3 归约
+        reduce
+        max
+        min
+        count
+   6.7.4 遍历
+       foreach
+
+

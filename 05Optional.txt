@@ -1,0 +1,42 @@
+5.1 什么是Optional
+      Optional是Java 8中提供的容器类，用于解决NPE问题
+
+
+5.2 创建
+    empty：获取一个value为null的Optional对象       ---   Optional<String> empty = Optional.empty();
+    of：创建一个不能为null的Optional对象，该方法接收一个参数作为value值，该参数不能为null
+    ofNullable：创建一个可以为null的Optional对象，该方法接收一个参数作为value值，该参数可以为null
+
+
+5.3  获取值
+    get：用于获取Optional中的value的值
+
+https://blog.csdn.net/qq122516902/article/details/103975404
+
+5.4 判断空值
+     isPresent：判断Optional中value属性是否为null，如果不为null，则返回true，
+     ifPresent：该方法接收一个Comsumer类型参数，用于判断值是否存在
+
+
+5.5  操作值
+     filter
+     map：操作值返回新值。
+     flatMap：接收一个Function参数，该Function参数返回一个Optional对象
+
+
+5.6 操作空值
+
+     orElse：     当Optional中的值为null时，返回该方法接收的参数
+     orElseGet：  该方法接收一个Supplier参数，用于在Optional中的值为null时返回Supplier生成的值
+     orElseThrow：该方法接收一个Supplier参数，该Supplier生成一个异常，用于在Optional中的值为null时抛出该异常
+
+
+
+
+
+
+
+
+
+
+

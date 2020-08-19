@@ -1,0 +1,77 @@
+
+
+https://blog.csdn.net/qq122516902/article/details/103975404
+
+7. 时间日期
+    7.1 TemporalField和TemporalUnit
+        Java 8中新的时间日期API中有点个重要的接口，分别是TemporalField和TemporalUnit，它们在很多地方都有使用到，
+        这两个接口常用的实现类分别是ChronoField和ChronoUnit。
+        7.1.1 ChronoField
+        7.2.2 ChronoUnit
+
+7.2 日期、时间和日期时间
+        Java 8提供了新是时间日期API，其中
+        java.time.LocalDate用于操作日期，
+        java.time.LocalTime用于操作时间，
+        java.time.LocalDateTime用于操作日期时间。
+
+7.3 创建
+              三者都提供了相同的创建方式，其中of方法接收指定的值用于创建，parse用于指定格式类型的值创建，now用于创建当前的结果。
+
+    7.3.1 关于日期
+    7.3.2 关于时间
+    7.3.3 关于日期时间
+
+7.4 获取值
+    7.4.1 关于日期
+    7.4.2 关于时间
+                             LocalTime now = LocalTime.now();
+                             long l = now.toNanoOfDay();
+                             System.out.println("l = " + l);   //l = 61904052000000    当天时间戳 纳秒
+    7.4.3 关于日期时间
+
+7.5 格式化
+    7.5.1 DateTimeFormatter
+    7.5.2 格式化日期或时间
+
+7.6 修改
+            日期或时间API中提供了withXxx方法用于修改对应的类型的值。
+7.6.1 关于日期
+7.6.2 关于时间
+7.6.3 关于日期时间
+
+7.7 计算
+7.7.1 关于日期
+7.7.2 关于日期
+7.7.3 关于日期时间
+
+
+7.8 比较
+
+
+7.9 机器日期时间Instant
+7.9.1 创建
+         // 当前时间
+          Instant now = Instant.now();
+7.9.2 获取值
+7.9.3 比较
+7.9.4 计算
+7.9.5 修改
+
+7.10 Duration
+    7.10.1 创建
+                         Instant now = Instant.now();
+                         Instant parse = Instant.parse("2020-01-11T02:02:53.241Z");
+                         Duration between = Duration.between(now, parse);
+    7.10.2 获取值
+    7.10.3 计算和修改
+    7.10.4 参与时间运算
+
+
+7.11 扩展
+    7.11.1 Period
+                  Period同Duration一样，但Period主要是对LocalDate的操作。
+
+    7.11.2 TemporalAdjuster
+                 TemporalAdjuster在时间日期中也有涉及，TemporalAdjusters中封装了许多静态方法快速生成TemporalAdjuster对象。
+

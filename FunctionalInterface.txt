@@ -1,0 +1,31 @@
+所谓的函数式接口，当然首先是一个接口，然后就是在这个接口里面只能有一个抽象方法。
+
+这种类型的接口也称为SAM接口，即Single Abstract Method interfaces
+
+
+函数式接口的定义：只有一个抽象方法的接口就是函数式接口。
+Lambda表达式只能作用在函数式接口上。
+
+
+接口在java.util.function包下，这里列举一些基本的函数式接口：
+
+
+函数式接口	       函数描述符	        参数	返回类型  	示例(在集合中的应用)
+Predicate<T>	bolean test(T t);	T	boolean	   Stream<T> filter(Predicate<? super T> predicate);
+Function<T, R>	 R apply(T t);	    T	R	       <R> Stream<R> map(Function<? super T, ? extends R> mapper);
+Consumer<T>	    void accept(T t);	T	void	   void forEach(Consumer<? super T> action);          ----消费者只接受输入，不接受输出
+Supplier<T>	      T get()	        无	T                                                             ----供应商         ，能提供输出
+Comparator<T>   int compare(T t1, T t2);
+
+
+
+关于装箱拆箱
+
+如Predicate<T>中的T是泛型，泛型不能接收基本类型，但是使用包装类型会增加内存和计算开销，所以对于基本类型Java 8中也提供了对应的函数式接口，基本类型的函数式接口主要有：
+
+函数式接口	          函数描述符
+IntPredicate	boolean test(int value);
+IntConsumer	       void accept(int value);
+IntFunction	          R apply(int value);
+IntSupplier	        int getAsInt();
+以int类型为例的函数式接口如上，其他类型类同 。要注意，基本类型的函数式接口只针对常用的long、int及double。其他基本类型没有对应的函数式接口。

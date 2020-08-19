@@ -1,0 +1,21 @@
+
+
+https://blog.csdn.net/qq122516902/article/details/103975404
+
+Lambda由三部分组成，分别是参数列表、箭头、函数体。
+
+参数列表
+
+和普通函数一样，Lambda也有参数列表，且表达方式相同，如：(ParamType1 param1, ParamType2 param2, ...)。
+可以省略参数列表参数类型，如(param1, param2, ...)。
+如果参数列表只有一个，且省略了参数类型，可以省略()，如param1。
+参数列表没有参数，()不能省略。
+箭头
+
+Lambda表达式的参数列表后紧跟关的是箭头，如->。
+
+函数体
+
+和普通函数一样，Lambda也有函数体，如{ System.out.println("hello world!")}。
+如果函数体只有一条语句，可以省略{}，如System.out.println("hello world!")}。
+如果函数体只有一条语句，且函数有返回值，要省略return关键字。
